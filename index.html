@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div class="max-w-4xl w-full">
+        <h1 class="text-3xl font-bold text-center mb-8">Bowling Game</h1>
+        <div id="leaderboard" class="bg-white shadow rounded p-4">
+            <h2 class="text-xl font-bold mb-4">Classifica Giocatori</h2>
+            <table class="min-w-full table-auto border-collapse border border-gray-300">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="border border-gray-300 px-4 py-2">Nome</th>
+                        <th class="border border-gray-300 px-4 py-2">Punteggi</th>
+                        <th class="border border-gray-300 px-4 py-2">Punteggio Totale</th>
+                    </tr>
+                </thead>
+                <tbody id="playerRows"></tbody>
+            </table>
+        </div>
+        <button id="startGame" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Inizia Partita</button>
+        <button id="togglePlayer" class="mt-4 px-4 py-2 bg-green-500 text-white rounded">Aggiungi Giocatore</button>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white rounded shadow p-6 max-w-sm w-full">
+            <h3 id="modalTitle" class="text-xl font-bold mb-4">Turno di:</h3>
+            <button id="rollButton" class="px-4 py-2 bg-green-500 text-white rounded">Tira!</button>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
